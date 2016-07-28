@@ -21,16 +21,16 @@ var ruleTester = new RuleTester();
 ruleTester.run("no-camels", rule, {
 
     valid: [
-
-        // give me some code that won't trigger a warning
+        "var smart_code = 3",
+        "var PascalCase = 2",
     ],
 
     invalid: [
         {
             code: "var dumbCode = 2;",
             errors: [{
-                message: "Fill me in.",
-                type: "Me too"
+                message: "RESPECT MAH AUTHORITAH",
+                type: "VariableDeclaration"
             }]
         }
     ]
