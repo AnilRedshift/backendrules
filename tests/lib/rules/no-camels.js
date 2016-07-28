@@ -21,8 +21,8 @@ var ruleTester = new RuleTester();
 ruleTester.run("no-camels", rule, {
 
     valid: [
-        "var smart_code = 3",
-        "var PascalCase = 2",
+        //"var smart_code = 3",
+        //"var PascalCase = 2",
     ],
 
     invalid: [
@@ -30,8 +30,9 @@ ruleTester.run("no-camels", rule, {
             code: "var dumbCode = 2;",
             errors: [{
                 message: "RESPECT MAH AUTHORITAH",
-                type: "VariableDeclaration"
-            }]
+                type: "VariableDeclaration",
+            }],
+            output: "var dumb_code = 2;",
         }
     ]
 });
